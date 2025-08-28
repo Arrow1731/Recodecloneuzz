@@ -1,0 +1,471 @@
+// import React, { useState } from "react";
+// import { db, collection, addDoc, Timestamp, getDocs } from "../firebase";
+// import { motion } from "framer-motion";
+
+// const ADMIN_USERNAME = "admin";
+// const ADMIN_PASSWORD = "admin123";
+
+// export default function Admin() {
+//   const [logged, setLogged] = useState(false);
+//   const [username, setUsername] = useState("");
+//   const [password, setPassword] = useState("");
+//   const [title, setTitle] = useState("");
+//   const [info, setInfo] = useState("");
+//   const [price, setPrice] = useState("");
+//   const [imageUrl, setImageUrl] = useState("");
+//   const [message, setMessage] = useState("");
+
+//   async function handleLogin(e) {
+//     e.preventDefault();
+//     if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+//       setLogged(true);
+//       setMessage("");
+//     } else {
+//       setMessage("Неверные данные для входа!");
+//     }
+//   }
+
+//   async function addProduct(e) {
+//     e.preventDefault();
+//     if (!title) {
+//       setMessage("Название продукта обязательно!");
+//       return;
+//     }
+//     try {
+//       await addDoc(collection(db, "products"), {
+//         title,
+//         info,
+//         price,
+//         imageUrl,
+//         createdAt: Timestamp.now(),
+//       });
+//       setMessage("✅ Продукт успешно добавлен!");
+//       setTitle("");
+//       setInfo("");
+//       setPrice("");
+//       setImageUrl("");
+//     } catch (err) {
+//       setMessage("Ошибка: " + err.message);
+//     }
+//   }
+
+//   return (
+//     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+//       {!logged ? (
+//         // Форма логина
+//         <motion.div
+//           initial={{ opacity: 0, y: 20 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           className="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-md"
+//         >
+//           <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+//             Вход в админ-панель
+//           </h2>
+//           <form onSubmit={handleLogin} className="space-y-4">
+//             <div>
+//               <label className="block text-gray-700 font-medium mb-1">
+//                 Логин
+//               </label>
+//               <input
+//                 type="text"
+//                 value={username}
+//                 onChange={(e) => setUsername(e.target.value)}
+//                 className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D1A84B]"
+//                 placeholder="Введите логин"
+//               />
+//             </div>
+//             <div>
+//               <label className="block text-gray-700 font-medium mb-1">
+//                 Пароль
+//               </label>
+//               <input
+//                 type="password"
+//                 value={password}
+//                 onChange={(e) => setPassword(e.target.value)}
+//                 className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D1A84B]"
+//                 placeholder="Введите пароль"
+//               />
+//             </div>
+//             <button
+//               type="submit"
+//               className="w-full bg-[#D1A84B] hover:bg-[#b8903c] text-white font-semibold py-2 rounded-xl shadow-md transition duration-300"
+//             >
+//               Войти
+//             </button>
+//           </form>
+//           {message && (
+//             <p className="text-center mt-4 text-red-500 font-medium">
+//               {message}
+//             </p>
+//           )}
+//         </motion.div>
+//       ) : (
+//         // Форма добавления продуктов
+//         <motion.div
+//           initial={{ opacity: 0, y: 20 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           className="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-lg"
+//         >
+//           <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+//             Добавить продукт
+//           </h2>
+//           <form onSubmit={addProduct} className="space-y-4">
+//             <div>
+//               <label className="block text-gray-700 font-medium mb-1">
+//                 Название продукта
+//               </label>
+//               <input
+//                 type="text"
+//                 value={title}
+//                 onChange={(e) => setTitle(e.target.value)}
+//                 className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D1A84B]"
+//                 placeholder="Введите название"
+//               />
+//             </div>
+//             <div>
+//               <label className="block text-gray-700 font-medium mb-1">
+//                 Описание
+//               </label>
+//               <textarea
+//                 value={info}
+//                 onChange={(e) => setInfo(e.target.value)}
+//                 className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D1A84B]"
+//                 placeholder="Введите описание"
+//               ></textarea>
+//             </div>
+//             <div>
+//               <label className="block text-gray-700 font-medium mb-1">
+//                 Цена
+//               </label>
+//               <input
+//                 type="number"
+//                 value={price}
+//                 onChange={(e) => setPrice(e.target.value)}
+//                 className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D1A84B]"
+//                 placeholder="Введите цену"
+//               />
+//             </div>
+//             <div>
+//               <label className="block text-gray-700 font-medium mb-1">
+//                 Ссылка на изображение
+//               </label>
+//               <input
+//                 type="text"
+//                 value={imageUrl}
+//                 onChange={(e) => setImageUrl(e.target.value)}
+//                 className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D1A84B]"
+//                 placeholder="https://..."
+//               />
+//             </div>
+//             <div className="flex gap-3 mt-4">
+//               <button
+//                 type="submit"
+//                 className="flex-1 bg-[#D1A84B] hover:bg-[#b8903c] text-white font-semibold py-2 rounded-xl shadow-md transition duration-300"
+//               >
+//                 Добавить продукт
+//               </button>
+//               <button
+//                 type="button"
+//                 onClick={async () => {
+//                   setMessage("Загрузка...");
+//                   const snap = await getDocs(collection(db, "products"));
+//                   setMessage(`Всего продуктов: ${snap.size}`);
+//                 }}
+//                 className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 rounded-xl shadow-md transition duration-300"
+//               >
+//                 Кол-во продуктов
+//               </button>
+//             </div>
+//           </form>
+//           {message && (
+//             <p className="mt-4 text-center text-green-600 font-semibold">
+//               {message}
+//             </p>
+//           )}
+//         </motion.div>
+//       )}
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React, { useState, useEffect } from "react";
+import { db } from "../firebase";
+import {
+  collection,
+  addDoc,
+  getDocs,
+  deleteDoc,
+  doc,
+  updateDoc,
+  Timestamp,
+} from "firebase/firestore";
+import { motion } from "framer-motion";
+
+const ADMIN_USERNAME = "admin";
+const ADMIN_PASSWORD = "admin";
+
+export default function Admin() {
+  const [logged, setLogged] = useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [title, setTitle] = useState("");
+  const [info, setInfo] = useState("");
+  const [price, setPrice] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+  const [message, setMessage] = useState("");
+  const [products, setProducts] = useState([]);
+  const [editingProduct, setEditingProduct] = useState(null);
+
+  // Yuklangan mahsulotlarni olish
+  const fetchProducts = async () => {
+    const snap = await getDocs(collection(db, "products"));
+    const items = snap.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+    setProducts(items);
+  };
+
+  useEffect(() => {
+    if (logged) fetchProducts();
+  }, [logged]);
+
+  async function handleLogin(e) {
+    e.preventDefault();
+    if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+      setLogged(true);
+      setMessage("");
+    } else {
+      setMessage("Login yoki parol noto'g'ri!");
+    }
+  }
+
+  async function addOrUpdateProduct(e) {
+    e.preventDefault();
+    if (!title) {
+      setMessage("Mahsulot nomi majburiy!");
+      return;
+    }
+    try {
+      if (editingProduct) {
+        // O'zgartirish rejimi
+        const ref = doc(db, "products", editingProduct.id);
+        await updateDoc(ref, { title, info, price, imageUrl });
+        setMessage("✅ Mahsulot muvaffaqiyatli o'zgartirildi!");
+        setEditingProduct(null);
+      } else {
+        // Yangi mahsulot qo'shish
+        await addDoc(collection(db, "products"), {
+          title,
+          info,
+          price,
+          imageUrl,
+          createdAt: Timestamp.now(),
+        });
+        setMessage("✅ Mahsulot muvaffaqiyatli qo'shildi!");
+      }
+      setTitle("");
+      setInfo("");
+      setPrice("");
+      setImageUrl("");
+      fetchProducts();
+    } catch (err) {
+      setMessage("Xatolik: " + err.message);
+    }
+  }
+
+  async function handleDelete(id) {
+    if (!window.confirm("Haqiqatan ham o'chirmoqchimisiz?")) return;
+    await deleteDoc(doc(db, "products", id));
+    setMessage("❌ Mahsulot o'chirildi!");
+    fetchProducts();
+  }
+
+  function handleEdit(product) {
+    setTitle(product.title);
+    setInfo(product.info);
+    setPrice(product.price);
+    setImageUrl(product.imageUrl);
+    setEditingProduct(product);
+    setMessage("");
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-100 p-6">
+      {!logged ? (
+        // Login formasi
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-md mx-auto"
+        >
+          <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+            Admin panelga kirish
+          </h2>
+          <form onSubmit={handleLogin} className="space-y-4">
+            <div>
+              <label className="block text-gray-700 font-medium mb-1">
+                Login
+              </label>
+              <input
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D1A84B]"
+                placeholder="Login kiriting"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 font-medium mb-1">
+                Parol
+              </label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D1A84B]"
+                placeholder="Parol kiriting"
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-[#D1A84B] hover:bg-[#b8903c] text-white font-semibold py-2 rounded-xl shadow-md transition duration-300"
+            >
+              Kirish
+            </button>
+          </form>
+          {message && (
+            <p className="text-center mt-4 text-red-500 font-medium">
+              {message}
+            </p>
+          )}
+        </motion.div>
+      ) : (
+        <div className="max-w-4xl mx-auto">
+          {/* Mahsulot qo'shish */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white shadow-2xl rounded-2xl p-8 mb-6"
+          >
+            <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+              {editingProduct ? "Mahsulotni o'zgartirish" : "Yangi mahsulot qo'shish"}
+            </h2>
+            <form onSubmit={addOrUpdateProduct} className="space-y-4">
+              <input
+                type="text"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D1A84B]"
+                placeholder="Mahsulot nomi"
+              />
+              <textarea
+                value={info}
+                onChange={(e) => setInfo(e.target.value)}
+                className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D1A84B]"
+                placeholder="Mahsulot haqida ma'lumot"
+              ></textarea>
+              <input
+                type="number"
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+                className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D1A84B]"
+                placeholder="Narxi (so'm)"
+              />
+              <input
+                type="text"
+                value={imageUrl}
+                onChange={(e) => setImageUrl(e.target.value)}
+                className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D1A84B]"
+                placeholder="Rasm URL manzili"
+              />
+              <button
+                type="submit"
+                className="w-full bg-[#D1A84B] hover:bg-[#b8903c] text-white font-semibold py-2 rounded-xl shadow-md transition duration-300"
+              >
+                {editingProduct ? "O'zgartirish" : "Qo'shish"}
+              </button>
+            </form>
+            {message && (
+              <p className="mt-4 text-center text-green-600 font-semibold">
+                {message}
+              </p>
+            )}
+          </motion.div>
+
+          {/* Mahsulotlar ro'yxati */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="bg-white shadow-xl rounded-2xl p-6"
+          >
+            <h3 className="text-xl font-semibold mb-4">Barcha mahsulotlar</h3>
+            <div className="space-y-4">
+              {products.length === 0 ? (
+                <p className="text-gray-500 text-center">Hozircha mahsulot yo'q</p>
+              ) : (
+                products.map((product) => (
+                  <div
+                    key={product.id}
+                    className="flex items-center justify-between bg-gray-50 p-4 rounded-xl shadow-sm"
+                  >
+                    <div className="flex items-center gap-4">
+                      <img
+                        src={product.imageUrl}
+                        alt={product.title}
+                        className="w-16 h-16 rounded-xl object-cover border"
+                      />
+                      <div>
+                        <h4 className="text-lg font-semibold">{product.title}</h4>
+                        <p className="text-gray-600">{product.info}</p>
+                        <p className="text-[#D1A84B] font-bold">
+                          {Number(product.price).toLocaleString()} so'm
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => handleEdit(product)}
+                        className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded-lg transition"
+                      >
+                        O'zgartirish
+                      </button>
+                      <button
+                        onClick={() => handleDelete(product.id)}
+                        className="bg-red-500 hover:bg-red-600 text-white px-4 py-1 rounded-lg transition"
+                      >
+                        O'chirish
+                      </button>
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
+          </motion.div>
+        </div>
+      )}
+    </div>
+  );
+}

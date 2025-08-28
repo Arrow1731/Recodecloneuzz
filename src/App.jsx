@@ -1,9 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar";
+import Navbar from "./components/Navbar";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
+import Catalog from "./Pages/Catalog";
 import Contact from "./Pages/Contact";
+import Admin from "./Pages/Admin";
 import NotFound from "./Pages/NotFound";
+
 
 
 function App() {
@@ -13,10 +16,12 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Home />} />        
-        <Route path="/about" element={<About />} />        
+        <Route path="/about" element={<About />} />
+        <Route path="/catalog" element={<Catalog />} />        
         {/* 404 sahifa uchun */}
         <Route path="*" element={<NotFound />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
       {/* <Main_Sec_Cards /> */}
     </Router>
