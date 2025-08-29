@@ -360,7 +360,7 @@
 //           </div>
 //         </div>
 //       </div>
-      
+
 //       {/* Footer component */}
 //       <Contact_link />
 //     </div>
@@ -403,8 +403,8 @@ const App = () => {
       <div className="container mx-auto mt-24 mb-24 px-4 sm:px-6 lg:px-8">
         {/* Contact Methods Section */}
         <div className="flex flex-col items-center mb-12 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-950 font-['Manrope'] mb-2">Bog'lanish usullari</h2>
-          <p className="text-lg font-normal text-neutral-600 font-['Inter']">Siz uchun qulay bo'lgan bog'lanish usulini tanlang</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-950 mb-2">Bog'lanish usullari</h2>
+          <p className="text-lg font-normal text-neutral-600">Siz uchun qulay bo'lgan bog'lanish usulini tanlang</p>
         </div>
 
         {/* Contact Cards Grid */}
@@ -419,13 +419,13 @@ const App = () => {
                 </svg>
               </div>
             </div>
-            <h4 className="text-base font-semibold text-neutral-950 font-['Manrope'] mb-1">Telefon</h4>
+            <h4 className="text-base font-semibold text-neutral-950 mb-1">Telefon</h4>
             <div className="bg-orange-400/10 text-orange-400 rounded-md py-1 px-3 text-xs mb-4">
               Asosiy
             </div>
-            <p className="text-base font-normal text-neutral-950 font-['Inter'] mb-1">+998 (62) 123-45-67</p>
-            <p className="text-base font-normal text-neutral-950 font-['Inter'] mb-4">+998 (90) 123-45-67</p>
-            <p className="text-sm font-normal text-neutral-600 font-['Inter']">Ish vaqtida qo'ng'iroq qiling</p>
+            <p className="text-base font-normal text-neutral-950 mb-1"><a href="tel:+998 (62) 123-45-67">+998 (62) 123-45-67</a></p>
+            <p className="text-base font-normal text-neutral-950 mb-4"><a href="tel:+998 (90) 123-45-67">+998 (90) 123-45-67</a></p>
+            <p className="text-sm font-normal text-neutral-600">Ish vaqtida qo'ng'iroq qiling</p>
           </div>
 
           {/* Card 2: Email */}
@@ -438,11 +438,11 @@ const App = () => {
                 </svg>
               </div>
             </div>
-            <h4 className="text-base font-semibold text-neutral-950 font-['Manrope'] mb-1">Email</h4>
+            <h4 className="text-base font-semibold text-neutral-950 mb-1">Email</h4>
             <div className="h-6 mb-4"></div> {/* Placeholder to align cards vertically */}
-            <p className="text-lg font-normal text-neutral-950 font-['Inter'] mb-1">info@redore.uz</p>
-            <p className="text-lg font-normal text-neutral-950 font-['Inter'] mb-4">sales@redore.uz</p>
-            <p className="text-sm font-normal text-neutral-600 font-['Inter']">2 soat ichida javob beramiz</p>
+            <p className="text-lg font-normal text-neutral-950 mb-1"><a href="mailto:info@redore.uz" target='_blank'>info@redore.uz</a></p>
+            <p className="text-lg font-normal text-neutral-950 mb-4"><a href="mailto:sales@redore.uz" target='_blank'>sales@redore.uz</a></p>
+            <p className="text-sm font-normal text-neutral-600">2 soat ichida javob beramiz</p>
           </div>
 
           {/* Card 3: Telegram */}
@@ -455,17 +455,17 @@ const App = () => {
                 </svg>
               </div>
             </div>
-            <h4 className="text-base font-semibold text-neutral-950 font-['Manrope'] mb-1">Telegram</h4>
+            <h4 className="text-base font-semibold text-neutral-950 mb-1">Telegram</h4>
             <div className="h-6 mb-4"></div> {/* Placeholder to align cards vertically */}
-            <p className="text-lg font-normal text-neutral-950 font-['Inter'] mb-1">@redore_doors</p>
-            <p className="text-base font-normal text-neutral-950 font-['Inter'] mb-4">+998 (90) 123-45-67</p>
-            <p className="text-sm font-normal text-neutral-600 font-['Inter']">Messangerda tezkor aloqa</p>
+            <p className="text-lg font-normal text-neutral-950 mb-1"><a href="https://t.me/@redore_doors" target='_blank'>@redore_doors</a></p>
+            <p className="text-base font-normal text-neutral-950 mb-4"><a href="https://t.me/+998 (90) 123-45-67">+998 (90) 123-45-67</a></p>
+            <p className="text-sm font-normal text-neutral-600">Messangerda tezkor aloqa</p>
           </div>
         </div>
 
         {/* Our Office and Location Details Section */}
         <div className="mt-24">
-          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-950 font-['Manrope'] mb-8">Bizning ofisimiz</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-950 mb-8">Bizning ofisimiz</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Office Details Column */}
             <div className="flex flex-col gap-8">
@@ -479,12 +479,14 @@ const App = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
-                  <h4 className="text-base font-semibold text-neutral-950 font-['Manrope']">Manzil</h4>
+                  <h4 className="text-base font-semibold text-neutral-950 ">Manzil</h4>
                 </div>
-                <p className="text-base font-normal text-neutral-950 font-['Inter'] mb-1">O'zbekiston Respublikasi</p>
-                <p className="text-base font-normal text-neutral-950 font-['Inter'] mb-1">Xorazm viloyati</p>
-                <p className="text-lg font-normal text-neutral-950 font-['Inter'] mb-4">Urganch sh., Sanoat ko'chasi, 15</p>
-                <p className="text-sm font-normal text-neutral-600 font-['Inter']">Sanoat zonasiga yaqin, qulay avtoturargoh</p>
+                <a href="https://maps.app.goo.gl/qUKzVL9hbr7fQ7Xj8" target='_blank'>
+                  <p className="text-base font-normal text-neutral-950 mb-1">O'zbekiston Respublikasi</p>
+                  <p className="text-base font-normal text-neutral-950 mb-1">Xorazm viloyati</p>
+                  <p className="text-lg font-normal text-neutral-950 mb-4">Urganch sh., Sanoat ko'chasi, 15</p>
+                  <p className="text-sm font-normal text-neutral-600">Sanoat zonasiga yaqin, qulay avtoturargoh</p>
+                </a>
               </div>
 
               {/* Working Hours Card */}
@@ -496,19 +498,19 @@ const App = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h4 className="text-base font-semibold text-neutral-950 font-['Manrope']">Ish vaqtlari</h4>
+                  <h4 className="text-base font-semibold text-neutral-950">Ish vaqtlari</h4>
                 </div>
                 <div className="flex justify-between items-center mb-1">
-                  <span className="text-base font-normal text-neutral-600 font-['Inter']">Dushanba - Juma</span>
-                  <span className="text-sm font-normal text-neutral-950 font-['Inter']">9:00 - 18:00</span>
+                  <span className="text-base font-normal text-neutral-600">Dushanba - Juma</span>
+                  <span className="text-sm font-normal text-neutral-950">9:00 - 18:00</span>
                 </div>
                 <div className="flex justify-between items-center mb-1">
-                  <span className="text-base font-normal text-neutral-600 font-['Inter']">Shanba</span>
-                  <span className="text-sm font-normal text-neutral-950 font-['Inter']">9:00 - 15:00</span>
+                  <span className="text-base font-normal text-neutral-600">Shanba</span>
+                  <span className="text-sm font-normal text-neutral-950">9:00 - 15:00</span>
                 </div>
                 <div className="flex justify-between items-center mb-4">
-                  <span className="text-sm font-normal text-neutral-600 font-['Inter']">Yakshanba</span>
-                  <span className="text-base font-normal text-neutral-950 font-['Inter']">Dam olish kuni</span>
+                  <span className="text-sm font-normal text-neutral-600">Yakshanba</span>
+                  <span className="text-base font-normal text-neutral-950">Dam olish kuni</span>
                 </div>
                 <div className="bg-lime-950/10 rounded-lg p-3 text-lime-950 text-sm font-normal font-['Inter']">
                   Favqulodda buyurtmalar va maslahatlar uchun - telefon orqali 24 soat aloqada
@@ -524,7 +526,7 @@ const App = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 19l6-6-6-6" />
                     </svg>
                   </div>
-                  <h4 className="text-base font-semibold text-neutral-950 font-['Manrope']">Qanday yetib borish mumkin</h4>
+                  <h4 className="text-base font-semibold text-neutral-950">Qanday yetib borish mumkin</h4>
                 </div>
                 <div className="mb-4">
                   <div className="flex items-center gap-3 mb-2">
@@ -533,9 +535,9 @@ const App = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h14a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v12m0-3h-3a3 3 0 01-3-3v-3a3 3 0 013-3h3a3 3 0 013 3v3a3 3 0 01-3 3h-3" />
                     </svg>
-                    <span className="text-base font-bold text-neutral-950 font-['Inter']">Avtomobilda</span>
+                    <span className="text-base font-bold text-neutral-950">Avtomobilda</span>
                   </div>
-                  <p className="text-sm font-normal text-neutral-600 font-['Inter']">Urganch markazidan Navoiy ko'chasi bo'ylab Sanoat ko'chasigacha, o'ngga buriling. Ofisimiz chap tomonda 200m uzoqlikda.</p>
+                  <p className="text-sm font-normal text-neutral-600">Urganch markazidan Navoiy ko'chasi bo'ylab Sanoat ko'chasigacha, o'ngga buriling. Ofisimiz chap tomonda 200m uzoqlikda.</p>
                 </div>
                 <div>
                   <div className="flex items-center gap-3 mb-2">
@@ -544,9 +546,9 @@ const App = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2a1 1 0 001 1h16a1 1 0 001-1z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M7 11h10a1 1 0 011 1v6a1 1 0 01-1 1H7a1 1 0 01-1-1v-6a1 1 0 011-1z" />
                     </svg>
-                    <span className="text-base font-bold text-neutral-950 font-['Inter']">Jamoat transportida</span>
+                    <span className="text-base font-bold text-neutral-950">Jamoat transportida</span>
                   </div>
-                  <p className="text-sm font-normal text-neutral-600 font-['Inter']">15-sonli, 23-sonli avtobus bilan 'Sanoat' bekatigacha. Ofisimizgacha piyoda 3 daqiqa.</p>
+                  <p className="text-sm font-normal text-neutral-600">15-sonli, 23-sonli avtobus bilan 'Sanoat' bekatigacha. Ofisimizgacha piyoda 3 daqiqa.</p>
                 </div>
               </div>
             </div>
@@ -554,43 +556,43 @@ const App = () => {
             {/* Request Form Column */}
             <div>
               <div className="bg-stone-50 rounded-xl shadow-lg p-8">
-                <h4 className="text-base font-semibold text-neutral-950 font-['Manrope']">Ariza qoldiring</h4>
-                <p className="text-sm font-normal text-neutral-600 font-['Inter'] mb-4">Tez orada siz bilan bog'lanamiz</p>
+                <h4 className="text-base font-semibold text-neutral-950">Ariza qoldiring</h4>
+                <p className="text-sm font-normal text-neutral-600 mb-4">Tez orada siz bilan bog'lanamiz</p>
                 <form className="flex flex-col gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-normal text-neutral-950 font-['Inter'] mb-1">Ism *</label>
+                    <label htmlFor="name" className="block text-sm font-normal text-neutral-950 mb-1">Ism *</label>
                     <input type="text" id="name" className="w-full h-10 px-3 py-2 rounded-md border border-stone-100 bg-orange-50 focus:outline-none focus:ring-2 focus:ring-orange-400" />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-normal text-neutral-950 font-['Inter'] mb-1">Telefon *</label>
+                    <label htmlFor="phone" className="block text-sm font-normal text-neutral-950 mb-1">Telefon *</label>
                     <input type="text" id="phone" className="w-full h-10 px-3 py-2 rounded-md border border-stone-100 bg-orange-50 focus:outline-none focus:ring-2 focus:ring-orange-400" />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-normal text-neutral-950 font-['Inter'] mb-1">Xabar</label>
+                    <label htmlFor="message" className="block text-sm font-normal text-neutral-950 mb-1">Xabar</label>
                     <textarea id="message" rows="4" className="w-full px-3 py-2 rounded-md border border-stone-100 bg-orange-50 focus:outline-none focus:ring-2 focus:ring-orange-400" placeholder="Eshikka bo'lgan talablaringiz haqida yozing..."></textarea>
                   </div>
-                  <button type="submit" className="w-full py-2 bg-lime-950 rounded-md text-orange-50 font-['Inter'] font-semibold shadow-sm hover:bg-lime-900 transition-colors">
+                  <button type="submit" className="w-full py-2 bg-lime-950 rounded-md text-orange-50 font-semibold shadow-sm hover:bg-lime-900 transition-colors">
                     Arizani yuborish
                   </button>
                 </form>
               </div>
 
               <div className="bg-orange-400/5 rounded-lg border border-orange-400/10 p-6 mt-8">
-                <h5 className="text-lg font-semibold text-neutral-950 font-['Manrope']">Ariza yuborilgandan so'ng nima bo'ladi?</h5>
+                <h5 className="text-lg font-semibold text-neutral-950">Ariza yuborilgandan so'ng nima bo'ladi?</h5>
                 <ul className="list-none space-y-2">
-                  <li className="flex items-start gap-2 text-sm text-neutral-600 font-['Inter']">
+                  <li className="flex items-start gap-2 text-sm text-neutral-600">
                     <span className="w-2 h-2 mt-2 bg-orange-400 rounded-full flex-shrink-0"></span>
                     <span>Biz siz bilan 30 daqiqa ichida bog'lanamiz</span>
                   </li>
-                  <li className="flex items-start gap-2 text-sm text-neutral-600 font-['Inter']">
+                  <li className="flex items-start gap-2 text-sm text-neutral-600">
                     <span className="w-2 h-2 mt-2 bg-orange-400 rounded-full flex-shrink-0"></span>
                     <span>Bepul maslahat beramiz</span>
                   </li>
-                  <li className="flex items-start gap-2 text-sm text-neutral-600 font-['Inter']">
+                  <li className="flex items-start gap-2 text-sm text-neutral-600">
                     <span className="w-2 h-2 mt-2 bg-orange-400 rounded-full flex-shrink-0"></span>
                     <span>Optimal yechim taklif qilamiz</span>
                   </li>
-                  <li className="flex items-start gap-2 text-sm text-neutral-600 font-['Inter']">
+                  <li className="flex items-start gap-2 text-sm text-neutral-600">
                     <span className="w-2 h-2 mt-2 bg-orange-400 rounded-full flex-shrink-0"></span>
                     <span>Bepul o'lchovni tashkil qilamiz</span>
                   </li>
@@ -600,7 +602,7 @@ const App = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Footer component */}
       <Contact_link />
     </div>

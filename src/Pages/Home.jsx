@@ -248,12 +248,12 @@ export default class Home extends Component {
               yuqori sifatli temir eshiklarni ishlab chiqaradi va barcha mahsulotlari uchun kafolat beradi.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="#">
+              <a href="Catalog">
                 <button className="bg-[#D1A84B] text-white rounded-lg px-6 py-3">
                   Eshiklarni ko'rish
                 </button>
               </a>
-              <a href="#">
+              <a href="/Contact">
                 <button className="border border-[#D1A84B] text-[#D1A84B] rounded-lg px-6 py-3">
                   Bog'lanish
                 </button>
@@ -329,6 +329,13 @@ export default class Home extends Component {
               </p>
             </div>
             <Main_sec />
+            <center className='mt-[30px]'>
+              <a href="Catalog">
+                <button className="bg-[#D1A84B] text-white rounded-lg px-6 py-3 w-[270px]">
+                  Barcha mahsulotlarni ko'rish
+                </button>
+              </a>
+            </center>
           </section>
         </main>
 

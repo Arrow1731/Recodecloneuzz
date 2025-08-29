@@ -67,21 +67,21 @@ function Navigation() {
             to="/about"
             activeClassName="active"
           >
-            About
+            Biz haqimizda
           </NavLink>
           <NavLink
             className="font-lato font-bold text-[#424551] hover:text-[#D1A84B] transition-colors"
             to="/catalog"
             activeClassName="active"
           >
-            Catalog
+            Mahsulotlar
           </NavLink>
           <NavLink
             className="font-lato font-bold text-[#424551] hover:text-[#D1A84B] transition-colors"
             to="/contact"
             activeClassName="active"
           >
-            Contact
+            Bog'lanish
           </NavLink>
         </span>
 
@@ -112,21 +112,21 @@ function Navigation() {
               onClick={() => setMenuOpen(false)}
               className="font-lato font-bold text-[#424551] hover:text-[#D1A84B] transition-colors"
             >
-              About
+              Biz haqimizda
             </NavLink>
             <NavLink
               to="/catalog"
               onClick={() => setMenuOpen(false)}
               className="font-lato font-bold text-[#424551] hover:text-[#D1A84B] transition-colors"
             >
-              Catalog
+              Mahsulotlar
             </NavLink>
             <NavLink
               to="/contact"
               onClick={() => setMenuOpen(false)}
               className="font-lato font-bold text-[#424551] hover:text-[#D1A84B] transition-colors"
             >
-              Contact
+              Bog'lanish
             </NavLink>
 
             {/* Телефон для мобильной версии */}

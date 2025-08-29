@@ -75,6 +75,8 @@
 
 
 import React, { Component } from 'react'
+import K_Door from '../assets/images/K_Eshik.png';
+import P_Door from '../assets/images/Door_03.png';
 
 export default class DoorsSection extends Component {
   render() {
@@ -82,12 +84,12 @@ export default class DoorsSection extends Component {
       <div className="container mx-auto px-4 font-lato">
         {/* grid вместо inline-flex */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          
+
           {/* Card 1 */}
           <div className="BackgroundShadow py-6 bg-stone-50 rounded-xl shadow-lg flex flex-col justify-start items-start gap-6 overflow-hidden">
             <img
               className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-t-xl"
-              src="https://placehold.co/480x360"
+              src={K_Door}
               alt="Uy uchun kirish eshiklari"
             />
             <div className="px-6 flex flex-col justify-start items-start gap-2">
@@ -99,9 +101,11 @@ export default class DoorsSection extends Component {
               </p>
             </div>
             <div className="px-6 w-full">
-              <button className="w-full h-10 bg-white rounded-md shadow outline outline-1 outline-zinc-300 text-neutral-950 text-sm font-medium">
-                Batafsil ma'lumot
-              </button>
+              <a href="Catalog">
+                <button className="w-full h-10 bg-white rounded-md shadow outline outline-1 outline-zinc-300 text-neutral-950 text-sm font-medium">
+                  Batafsil ma'lumot
+                </button>
+              </a>
             </div>
           </div>
 
@@ -121,9 +125,11 @@ export default class DoorsSection extends Component {
               </p>
             </div>
             <div className="px-6 w-full">
-              <button className="w-full h-10 bg-white rounded-md shadow outline outline-1 outline-zinc-300 text-neutral-950 text-sm font-medium">
-                Batafsil ma'lumot
-              </button>
+              <a href="Catalog">
+                <button className="w-full h-10 bg-white rounded-md shadow outline outline-1 outline-zinc-300 text-neutral-950 text-sm font-medium">
+                  Batafsil ma'lumot
+                </button>
+              </a>
             </div>
           </div>
 
@@ -131,7 +137,7 @@ export default class DoorsSection extends Component {
           <div className="BackgroundShadow py-6 bg-stone-50 rounded-xl shadow-lg flex flex-col justify-start items-start gap-6 overflow-hidden">
             <img
               className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-t-xl"
-              src="https://placehold.co/480x360"
+              src={P_Door}
               alt="Yong'in eshiklari"
             />
             <div className="px-6 flex flex-col justify-start items-start gap-2">
@@ -143,9 +149,11 @@ export default class DoorsSection extends Component {
               </p>
             </div>
             <div className="px-6 w-full">
-              <button className="w-full h-10 bg-white rounded-md shadow outline outline-1 outline-zinc-300 text-neutral-950 text-sm font-medium">
-                Batafsil ma'lumot
-              </button>
+              <a href="Catalog">
+                <button className="w-full h-10 bg-white rounded-md shadow outline outline-1 outline-zinc-300 text-neutral-950 text-sm font-medium">
+                  Batafsil ma'lumot
+                </button>
+              </a>
             </div>
           </div>
 
