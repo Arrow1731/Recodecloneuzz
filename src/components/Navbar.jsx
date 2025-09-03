@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react"; // Иконки для бургер-ме
 import Main_logo from '../assets/images/Main_logo.png';
 import ContactLogo from '../assets/AloqaIcon.png';
 
+
 function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
 
