@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Heaer_img from '../assets/images/header_right_img.png';
+import Heaer_img from '../assets/images/Sign_logo.png';
 import Ustalar from '../assets/images/Usta.png';
 import Main_sec from '../components/Main_sec';
 import Footer from '../components/Footer';
@@ -11,12 +11,12 @@ import { MdEmail } from "react-icons/md";
 export default class Home extends Component {
   render() {
     return (
-      <div className="font-lato mt-[50px]">
+      <div className="font-lato mt-[90px]">
         {/* HEADER */}
         <div className="container mx-auto px-4 py-10 flex flex-col lg:flex-row items-center gap-10">
           <div className="flex flex-col gap-6 text-center lg:text-left">
             <h2 className="font-bold text-3xl md:text-4xl lg:text-6xl leading-tight">
-              Har bir eshikda sifat va xavfsizlik
+              Har bir eshikda <br /> sifat va xavfsizlik
             </h2>
             <p className="font-eregular text-base md:text-lg text-neutral-700">
               "Redore" kompaniyasi zamonaviy texnologiyalardan foydalangan holda
@@ -62,7 +62,7 @@ export default class Home extends Component {
             </div>
           </div>
           <div className="flex-shrink-0">
-            <img src={Heaer_img} alt="Header" className="max-w-full h-auto" />
+            <img src={Heaer_img} alt="Header" className="max-w-[630px]" />
           </div>
         </div>
 

@@ -2,7 +2,8 @@
 
 import React, { Component } from "react";
 import Contact_link from "../components/Contact_link";
-import Company_logo from "../assets/images/Company_photo.jpg";
+// import Company_logo from "../assets/images/Company_photo.jpg";
+import Company_logo from "../assets/images/Sign_logo.png";
 import {
   CalendarCheck,
   Users,
@@ -18,7 +19,7 @@ export default class about extends Component {
     const stats = [
       { value: "5+", label: "Yillik tajriba", icon: CalendarCheck },
       { value: "5000+", label: "Mamnun mijozlar", icon: Users },
-      { value: "45+", label: "Professional mutaxassislar", icon: Briefcase },
+      { value: "15+", label: "Professional mutaxassislar", icon: Briefcase },
       { value: "100%", label: "Sifat kafolati", icon: BadgeCheck },
     ];
 
@@ -75,44 +76,48 @@ export default class about extends Component {
           </div>
 
           {/* История компании */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[80px] items-center mb-[70px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 mb-[100px]">
             <img
               src={Company_logo}
               alt="Biz haqimizda"
-              className="rounded-xl shadow-lg w-full h-auto object-cover"
+              className="rounded-xl shadow-lg max-w-[420px] w-full object-cover"
             />
-            <div>
-              <h2 className="text-2xl font-semibold text-neutral-950 mb-4">
-                Kompaniya tarixi
+            <div className="ml-[-170px]">
+              <h2 className="text-[54px] font-semibold text-neutral-950 mb-4">
+                Kompaniya Tarixi
               </h2>
-              <p className="text-neutral-600 leading-relaxed">
-                Bizning kompaniyamiz 2019-yildan buyon eshik ishlab chiqarish va <br />
+              <p className="text-neutral-600 leading-relaxed text-[20px]">
+                <b className="text-[51px] text-[#D1A84B]">REDORS</b> <br /> Bizning kompaniyamiz 2019-yildan buyon eshik ishlab chiqarish va <br />
                 o‘rnatish sohasida faoliyat yuritib kelmoqda. <br /> Shu vaqt ichida
-                minglab mijozlarimizga sifatli va ishonchli mahsulotlar taqdim
+                minglab mijozlarimizga sifatli va ishonchli mahsulotlar <br /> taqdim
                 etdik. <br /> Asosiy maqsadimiz – mijozlarimizning xavfsizligi va uylari
-                hamda ofislarining go‘zalligini ta’minlash.
+                hamda ofislarining <br /> go‘zalligini ta’minlash.
               </p>
+
+              <button className="ml-[-178px] text-[23px] mt-[30px]">
+                <a className="text-[blue]" href="#">Logo Yaralish Tarixi Haqida Qisqacha Ma'lumot.</a>
+              </button>
             </div>
           </div>
 
           {/* Миссия */}
           <div className="mb-16 text-center">
-            <h2 className="text-2xl font-semibold text-neutral-950 mb-4">
-              Bizning missiyamiz
+            <h2 className="text-[27px] font-semibold text-neutral-950 mb-4">
+              Bizning Missiyamiz
             </h2>
-            <p className="text-neutral-600 leading-relaxed">
+            <p className="text-neutral-600 leading-relaxed text-[19px]">
               Mijozlarimizga eng yuqori sifatli eshiklarni taklif qilish,
               xavfsizlikni ta’minlash va dizayndagi innovatsiyalar orqali uy va <br />
               ofislarni yanada chiroyli qilish.
             </p>
           </div>
 
-          {/* Ценности */}
+          {/* Ценности */} <br /><br />
           <div>
-            <h2 className="text-2xl font-semibold text-neutral-950 mb-8">
+            <h2 className="text-[27px] font-semibold text-neutral-950 mb-8">
               Bizning qadriyatlarimiz
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-[50px] text-[27px]">
               {values.map((item, idx) => {
                 const Icon = item.icon;
                 return (

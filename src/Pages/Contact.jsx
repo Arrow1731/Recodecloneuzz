@@ -76,7 +76,7 @@ const App = () => {
       await sendToTelegram(text);
       setStatus({ type: "success", text: "✅ Arizangiz yuborildi! Tez orada siz bilan bog‘lanamiz." });
       resetForm();
-    } catch (err) {
+    } catch (error) {
       setStatus({ type: "error", text: "Xatolik yuz berdi. Iltimos, qayta urinib ko‘ring." });
     } finally {
       setSubmitting(false);
@@ -172,7 +172,7 @@ const App = () => {
                 <a href="https://maps.app.goo.gl/qUKzVL9hbr7fQ7Xj8" target="_blank" rel="noreferrer">
                   <p className="text-base font-normal text-neutral-950 mb-1">O'zbekiston Respublikasi</p>
                   <p className="text-base font-normal text-neutral-950 mb-1">Xorazm viloyati</p>
-                  <p className="text-lg font-normal text-neutral-950 mb-4">Bog'ot tumani, Ashxobod mahallasi, Sarbon ko'chasi, 14</p>
+                  <p className="text-lg font-normal text-neutral-950 mb-4">Bog'ot tumani, Ashxobod mahallasi, Sarbon ko'chasi, 16</p>
                 </a>
               </div>
 

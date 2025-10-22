@@ -93,7 +93,7 @@ const App = () => {
                   <path d="M13.3333 7.16683C13.3333 10.4955 9.64066 13.9622 8.40066 15.0328C8.28515 15.1197 8.14453 15.1667 8 15.1667C7.85547 15.1667 7.71485 15.1197 7.59933 15.0328C6.35933 13.9622 2.66666 10.4955 2.66666 7.16683C2.66666 5.75234 3.22857 4.39579 4.22876 3.39559C5.22896 2.3954 6.58551 1.8335 8 1.8335C9.41449 1.8335 10.771 2.3954 11.7712 3.39559C12.7714 4.39579 13.3333 5.75234 13.3333 7.16683Z" stroke="currentColor" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round" />
                   <path d="M8 9.1665C9.10457 9.1665 10 8.27107 10 7.1665C10 6.06193 9.10457 5.1665 8 5.1665C6.89543 5.1665 6 6.06193 6 7.1665C6 8.27107 6.89543 9.1665 8 9.1665Z" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                <span><a href="https://maps.app.goo.gl/qUKzVL9hbr7fQ7Xj8" target='_blank' className="hover:text-[#DEB67B] transition-colors">Xorazm viloyati, Bog'ot tumani Ashxobod mahallasi, Sarbon ko'chasi, 14 - uy</a></span>
+                <span><a href="https://maps.app.goo.gl/qUKzVL9hbr7fQ7Xj8" target='_blank' className="hover:text-[#DEB67B] transition-colors">Xorazm viloyati, Bog'ot tumani Ashxobod mahallasi, Sarbon ko'chasi, 16 - uy</a></span>
               </div>
             </div>
           </div>
