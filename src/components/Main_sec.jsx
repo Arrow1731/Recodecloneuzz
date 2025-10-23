@@ -67,7 +67,7 @@ export default class DoorsSection extends Component {
             />
             <div className="px-6 flex flex-col justify-start items-start gap-2">
               <h3 className="text-neutral-950 text-lg font-semibold">
-                Yong'in eshiklari
+                Yong'inga qarshi eshiklari
               </h3>
               <p className="text-neutral-600 text-sm sm:text-base">
                 Olovga chidamli xususiyatlarga ega sertifikatlangan eshiklar

@@ -11,14 +11,14 @@ import { MdEmail } from "react-icons/md";
 export default class Home extends Component {
   render() {
     return (
-      <div className="font-lato mt-[90px]">
+      <div className="font-Bornia font-medium mt-[90px]">
         {/* HEADER */}
         <div className="container mx-auto px-4 py-10 flex flex-col lg:flex-row items-center gap-10">
           <div className="flex flex-col gap-6 text-center lg:text-left">
-            <h2 className="font-bold text-3xl md:text-4xl lg:text-6xl leading-tight">
+            <h2 className="font-Bornia font-bold text-3xl md:text-4xl lg:text-6xl leading-tight">
               Har bir eshikda <br /> sifat va xavfsizlik
             </h2>
-            <p className="font-eregular text-base md:text-lg text-neutral-700">
+            <p className="font-Bornia text-base md:text-lg text-neutral-700">
               "Redore" kompaniyasi zamonaviy texnologiyalardan foydalangan holda
               yuqori sifatli temir eshiklarni ishlab chiqaradi va barcha mahsulotlari uchun kafolat beradi.
             </p>
@@ -71,7 +71,7 @@ export default class Home extends Component {
           {/* WHY CHOOSE */}
           <section className="container mx-auto px-4 py-16">
             <div className="text-center mb-12">
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-Bornia font-semibold">
                 Nima uchun aynan bizni tanlaysiz?
               </h3>
               <p className="text-base md:text-lg text-neutral-600 mt-3">
@@ -84,7 +84,7 @@ export default class Home extends Component {
               {/* CARD 1 */}
               <div className="bg-stone-50 rounded-xl shadow p-6 flex flex-col items-center gap-4">
                <BadgeCheck size={50} className="text-green-500 mb-4" />
-                <h4 className="text-lg font-semibold">Yuqori sifatli</h4>
+                <h4 className="text-lg font-Bornia font-semibold">Yuqori sifatli</h4>
                 <p className="text-center text-sm text-neutral-600">
                   Har bir eshik tajribali mutaxassislar tomonidan yuqori sifatli
                   materiallar va zamonaviy texnologiyalar bilan amalga oshiriladi
@@ -94,7 +94,7 @@ export default class Home extends Component {
               {/* CARD 2 */}
               <div className="bg-stone-50 rounded-xl shadow p-6 flex flex-col items-center gap-4">
                  <ShieldCheck size={50} className="text-blue-500 mb-4" />
-                <h4 className="text-lg font-semibold">Ishonchlilik kafolati</h4>
+                <h4 className="text-lg font-Bornia font-semibold">Ishonchlilik kafolati</h4>
                 <p className="text-center text-sm text-neutral-600">
                   Biz barcha mahsulotlarimizga rasmiy kafolat beramiz va
                   har bir eshikning chidamliligini ta'minlaymiz
@@ -104,7 +104,7 @@ export default class Home extends Component {
               {/* CARD 3 */}
               <div className="bg-stone-50 rounded-xl shadow p-6 flex flex-col items-center gap-4">
                 <Cpu size={50} className="text-purple-500 mb-4" />
-                <h4 className="text-lg font-semibold">Zamonaviy texnologiyalar</h4>
+                <h4 className="text-lg  font-Bornia font-semibold">Zamonaviy texnologiyalar</h4>
                 <p className="text-center text-sm text-neutral-600">
                   Biz ilg‘or va innovatsion uskunalardan foydalanamiz
                   mukammal eshiklarni yaratish uchun
@@ -116,7 +116,7 @@ export default class Home extends Component {
           {/* PRODUCTS */}
           <section className="container mx-auto px-4 py-16">
             <div className="text-center mb-12">
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-Bornia font-semibold">
                 Bizning mahsulotlarimiz
               </h3>
               <p className="text-base md:text-lg text-neutral-600 mt-3">
@@ -138,7 +138,7 @@ export default class Home extends Component {
         <div className="bg-[#D1A84B] py-16 px-4 sm:px-8 lg:px-20">
           <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="flex flex-col gap-4">
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-950">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-Bornia font-bold text-neutral-950">
                 Bizning kafolatlarimiz va majburiyatlarimiz
               </h3>
               <ul className="space-y-3 text-neutral-950 text-base">

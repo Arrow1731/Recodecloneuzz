@@ -95,7 +95,7 @@ export default class about extends Component {
               </p>
 
               <button className="ml-[-178px] text-[23px] mt-[30px]">
-                <a className="text-[blue]" href="#">Logo Yaralish Tarixi Haqida Qisqacha Ma'lumot.</a>
+                <a className="text-[blue]" href="https://drive.google.com/file/d/1XJI_SQpOEg_boIUQRyUbwNZj9WA2d7NZ/view?usp=sharing" target="_blank">Logo Yaralish Tarixi Haqida Qisqacha Ma'lumot.</a>
               </button>
             </div>
           </div>
