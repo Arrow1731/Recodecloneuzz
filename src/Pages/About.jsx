@@ -4,6 +4,8 @@ import React, { Component } from "react";
 import Contact_link from "../components/Contact_link";
 // import Company_logo from "../assets/images/Company_photo.jpg";
 import Company_logo from "../assets/images/Sign_logo.png";
+import { ArrowRight } from 'lucide-react';
+
 import {
   CalendarCheck,
   Users,
@@ -94,8 +96,8 @@ export default class about extends Component {
                 hamda ofislarining <br /> go‘zalligini ta’minlash.
               </p>
 
-              <button className="ml-[-178px] text-[23px] mt-[30px]">
-                <a className="text-[blue]" href="https://drive.google.com/file/d/1XJI_SQpOEg_boIUQRyUbwNZj9WA2d7NZ/view?usp=sharing" target="_blank">Logo Yaralish Tarixi Haqida Qisqacha Ma'lumot.</a>
+              <button className="ml-[-340px] mt-[12px]">
+                <a className="text-[#D1A84B] text-[34px]" href="https://drive.google.com/file/d/1XJI_SQpOEg_boIUQRyUbwNZj9WA2d7NZ/view?usp=sharing" target="_blank"> <ArrowRight /><b>Logo tarixi.</b></a>
               </button>
             </div>
           </div>
@@ -123,7 +125,7 @@ export default class about extends Component {
                 return (
                   <div
                     key={idx}
-                    className="bg-stone-50 rounded-xl shadow-md p-6 flex flex-col justify-start hover:shadow-lg transition"
+                    className="bg-stone-50 rounded-xl shadow-md p-6 flex flex-col justify-start hover:shadow-lg transition border-[2px] border-[#DEB67B]"
                   >
                     {/* Icon */}
                     <Icon size={40} className="mb-4 text-[#D1A84B]" />
