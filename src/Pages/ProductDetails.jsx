@@ -372,15 +372,15 @@ export default function ProductDetails() {
     if (!product) return;
 
     const message = `
-🛒 <b>Yangi Buyurtma!</b>
-👤 Ism: ${customerName}
-📞 Telefon: ${phoneNumber}
-📦 Mahsulot: ${product.title}
-💰 Narx: ${Number(product.price).toLocaleString()} so'm
-📦 Soni: ${quantity} dona
-🚚 Yetkazib berish: Kompaniya avtomobillari orqali
-💳 To'lov turi: ${paymentMethod}
-`;
+        🛒 <b>Yangi Buyurtma!</b>\N
+        👤 Mijoz Ism: ${customerName}
+        📞 Telefon raqami: ${phoneNumber}
+        📦 Mahsulot nomi: ${product.title}
+        💰 Narx: ${Number(product.price).toLocaleString()} so'm
+        📦 Soni: ${quantity} dona
+        🚚 Yetkazib berish: Kompaniya avtomobillari orqali
+        💳 To'lov turi: ${paymentMethod}
+        `;
 
     try {
       await Promise.all(
@@ -456,11 +456,10 @@ export default function ProductDetails() {
                     src={url}
                     alt={`Rasm ${index + 1}`}
                     onClick={() => setMainImage(url)}
-                    className={`w-[93px] h-[93px] object-cover rounded-[10px] cursor-pointer border-2 transition ${
-                      mainImage === url
+                    className={`w-[93px] h-[93px] object-cover rounded-[10px] cursor-pointer border-2 transition ${mainImage === url
                         ? "border-[#D1A84B]"
                         : "border-transparent hover:border-gray-300"
-                    }`}
+                      }`}
                   />
                 ))}
               </div>
@@ -478,7 +477,7 @@ export default function ProductDetails() {
             </p>
 
             <p className="text-[#D1A84B] text-[24px]">
-              Mahsulot narxi:{" "}
+              Mahsulot narxi:{" "} <br />
               <b className="text-[34px]">
                 {Number(product.price).toLocaleString()} so'm
               </b>
