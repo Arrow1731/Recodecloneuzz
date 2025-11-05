@@ -87,10 +87,10 @@ function Navigation() {
 
             {/* Телефон для мобильной версии */}
             <a id="nav_num"
-              href="tel:+998943501731"
+              href="tel:+998997708191"
               className="mt-2 text-[#D1A84B] font-bold hover:underline"
             >
-              +998 99 500 77 88
+              +998 (99) - 770 - 81 - 91
             </a>
           </div>
         </div>
